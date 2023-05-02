@@ -1,0 +1,46 @@
+.cta {
+  padding: 5rem;
+  background-color: var(--color-grey-light-3);
+  text-transform: uppercase;
+  text-align: center;
+
+  &__heading {
+    color: var(--color-grey-dark-1);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  &__button {
+    margin: 4rem auto;
+    padding: 1rem 3rem;
+    width: 20rem;
+    height: 5rem;
+    background-image: var(--gradient-primary);
+    border-radius: 5rem;
+    color: var(--color-grey-light-1);
+    line-height: 3rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  &__button:hover &__button-visible {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  &__button:hover &__button-invisible {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+
+  &__button-visible,
+  &__button-invisible {
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+
+  &__button-invisible {
+    opacity: 0;
+  }
+}

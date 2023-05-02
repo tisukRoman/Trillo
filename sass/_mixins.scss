@@ -1,0 +1,27 @@
+// 1200 px
+@mixin for-tablet-landscape {
+  @media only screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+// 900 px
+@mixin for-tablet-portrait {
+  @media only screen and (max-width: 56.25em) {
+    @content;
+  }
+}
+
+// 600 px
+@mixin for-mobile {
+  @media only screen and (max-width: 37.5em) {
+    @content;
+  }
+}
+
+// 480 px
+@mixin for-small-mobile {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}

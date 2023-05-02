@@ -1,0 +1,23 @@
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+
+  @include for-small-mobile {
+    display: none;
+  }
+}
+
+.legal {
+  color: var(--color-grey-light-4);
+  padding: 2rem;
+  text-align: center;
+  font-weight: 600;
+
+  @include for-tablet-portrait {
+    display: none;
+  }
+}
+
+.line {
+  border: var(--line);
+}

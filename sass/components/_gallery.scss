@@ -1,0 +1,16 @@
+.gallery {
+  border-bottom: var(--border-bottom-primary);
+  height: 15rem;
+  display: flex;
+
+  &__img-box {
+    display: block;
+    flex: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  }
+}

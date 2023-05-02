@@ -1,0 +1,42 @@
+.link {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-primary-dark);
+  }
+
+  &:hover {
+    gap: 0.4rem;
+  }
+
+  &__text,
+  &__text:link,
+  &__text:visited {
+    color: var(--color-primary-dark);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary-dark);
+  }
+}

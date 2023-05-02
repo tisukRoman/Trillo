@@ -1,0 +1,83 @@
+.navigation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include for-tablet-portrait {
+    flex-direction: row;
+    height: 6rem;
+    align-items: stretch;
+  }
+
+  &__list {
+    margin-top: 3rem;
+    list-style: none;
+    display: block;
+
+    @include for-tablet-portrait {
+      margin-top: 0;
+      display: flex;
+      flex: 1;
+      gap: 2rem;
+    }
+  }
+
+  &__option {
+    @include for-tablet-portrait {
+      flex: 1;
+    }
+  }
+
+  &__option:hover &__link::after {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-grey-light-1);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    position: relative;
+
+    @include for-tablet-portrait {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      height: 100%;
+    }
+  }
+
+  &__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    height: 100%;
+    width: 0.2rem;
+
+    transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    z-index: 3;
+  }
+
+  &__text {
+    z-index: 3;
+  }
+}
